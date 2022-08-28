@@ -1,9 +1,9 @@
 name: Python application CI/CD with Github Actions
-
 on: [push]
 
 jobs:
   build:
+  
     runs-on:  ubuntu-latest
 
     steps:
