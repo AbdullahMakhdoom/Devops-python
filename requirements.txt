@@ -1,0 +1,6 @@
+tweepy
+textblob
+black
+pylint
+pytest
+pytest-cov
