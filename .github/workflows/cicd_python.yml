@@ -1,0 +1,31 @@
+name: Python application CI/CD with Github Actions
+
+on: [push]
+
+jobs:
+  build:
+    runs-on:  ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+
+    - name: Install dependencies
+    run: |
+      make install
+    - name: Format code
+    run: |
+      # make format
+    - name: Lint with pylint
+    run: |
+      # make lint
+    - name: Test with pytest
+    run: |
+      # make test
+    
+    
+
+    

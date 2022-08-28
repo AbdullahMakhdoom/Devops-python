@@ -3,7 +3,6 @@ install:
 	pip install --upgrade pip && pip install -r requirements.txt
 post-install:
 	python -m textblob.download_corpora
-
 format:
 	# format python code
 lint:
@@ -14,4 +13,5 @@ build:
 	# build app
 deploy:
 	# deploy app
-all: install format lint test deploy
+	
+all: install post-install format lint test deploy
