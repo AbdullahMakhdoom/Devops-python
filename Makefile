@@ -1,7 +1,9 @@
 install: 
 	# install necessary pacakges 
-	pip install --upgrade pip && pip install -r requirements.txt
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
 post-install:
+	# 
 	python -m textblob.download_corpora
 format:
 	# format python code
