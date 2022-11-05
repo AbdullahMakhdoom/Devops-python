@@ -9,6 +9,7 @@ format:
 	black *.py lib/*.py
 lint:
 	# lint python code
+	pylint --disable=R,C *.py lib/*.py
 test:
 	# run tests
 build: 
