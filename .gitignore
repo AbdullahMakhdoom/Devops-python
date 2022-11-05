@@ -1,2 +1,5 @@
 __pychache__/
+lib/__pychache__/
 venv/
+.coverage
+.pytest_cache
