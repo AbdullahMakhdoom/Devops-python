@@ -3,10 +3,10 @@ install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 post-install:
-	# 
 	python -m textblob.download_corpora
 format:
 	# format python code
+	black *.py lib/*.py
 lint:
 	# lint python code
 test:
