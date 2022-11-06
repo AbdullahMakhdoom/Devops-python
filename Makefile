@@ -15,7 +15,11 @@ test:
 	python -m pytest -vv --cov=lib --cov=main test_*.py
 build: 
 	# build app
+	docker build -t fastapi .
+run:
+	# run docker
+	docker run -p 8080:8080 fastapi
 deploy:
 	# deploy app
 	
-all: install post-install format lint test deploy
+all: install lint test build run deploy
