@@ -14,12 +14,16 @@ test:
 	# run tests
 	python -m pytest -vv --cov=lib --cov=main test_*.py
 build: 
-	# build app
+	# build docker 
 	docker build -t fastapi .
 run:
 	# run docker
 	docker run -p 8080:8080 fastapi
 deploy:
-	# deploy app
+	# deploy docker container to AWS ECR
+	# aws ecr get-login-password --region us-west-1 | docker login --username AWS --password-stdin XXXXXXXXXXXX.dkr.ecr.us-west-1.amazonaws.com
+	docker tag fastapi:latest 055338534628.dkr.ecr.us-west-1.amazonaws.com/fastapi-wiki:latest
+	docker push 055338534628.dkr.ecr.us-west-1.amazonaws.com/fastapi-wiki:latest
+
 	
 all: install lint test build run deploy
