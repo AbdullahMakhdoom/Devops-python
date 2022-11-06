@@ -16,6 +16,9 @@ jobs:
     - name: Install dependencies
       run: |
         make install  
+    - name: Download textblob corpora
+      run: |
+        make post-install        
     - name: Format code
       run: |
         make format
