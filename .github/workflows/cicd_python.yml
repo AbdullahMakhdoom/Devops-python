@@ -50,7 +50,7 @@ jobs:
         ECR_REPOSITORY: "055338534628.dkr.ecr.us-west-1.amazonaws.com/fastapi-wiki"
         IMAGE_TAG: latest
       run: |
-        docker tag fastapi-wiki:latest $ECR_REPOSITORY:$IMAGE_TAG
+        docker tag fastapi:latest $ECR_REPOSITORY:$IMAGE_TAG
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
     
