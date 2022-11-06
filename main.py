@@ -23,6 +23,7 @@ async def search(value: str):
 async def wiki(name: str):
     """Retrive wikipedia page"""
 
+    print("Get page for :", name)
     result = wiki_fetch(name)
     return {"results": result}
 
