@@ -37,7 +37,6 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-west-1 // region you want to push the image to
 
     - name: Login to Amazon ECR
       id: login-ecr
