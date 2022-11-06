@@ -12,7 +12,7 @@ lint:
 	pylint --disable=R,C *.py lib/*.py
 test:
 	# run tests
-	python -m pytest -vv --cov=lib test_logic.py
+	python -m pytest -vv --cov=lib --cov=main test_*.py
 build: 
 	# build app
 deploy:
