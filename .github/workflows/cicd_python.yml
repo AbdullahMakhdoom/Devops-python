@@ -25,6 +25,9 @@ jobs:
     - name: Test with pytest
       run: |
         make test
+    - name: Build Docker Container
+      run: |
+        make build
     
     
 
